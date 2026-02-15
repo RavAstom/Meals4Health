@@ -1,6 +1,10 @@
-#include <stdio.h>
+
+
+#include "./src/mainmenu.c"
 
 int main () {
+   
+   mainmenu();
 
    return 0;
 }
