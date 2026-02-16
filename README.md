@@ -3,7 +3,7 @@ Make sure you have git installed on your computer. Download via https://git-scm.
 
 Add files to computer using command below (DO THIS ONLY ONCE)
 ```git
-git pull https://github.com/RavAstom/Meals4Health
+git clone https://github.com/RavAstom/Meals4Health
 ```
 
 # 2) Upload the files to the repository
@@ -15,7 +15,7 @@ git add .
 
 Then commit the files. (A text editor may open, read instructions as follows)
 ```git
-git commit
+git commit -m "message"
 ```
 
 Finally push it to the repository
@@ -42,6 +42,7 @@ Or if you have make installed on computer (not important)
 ```
 make
 ```
+
 
 
 
