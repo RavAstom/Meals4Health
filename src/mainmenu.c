@@ -19,28 +19,22 @@ void printmenu (int choice) {
       "Exit"
    };
 
-
-   printf("                                 (   )                             (   )                        (   ) (   )     (   )\n");
-   printf(" ___ .-. .-.     .--.     .---.   | |      .--.           ,--.      | | .-.     .--.     .---.   | |   | |_      | | .-.\n");
-   printf("(   )   '   \\   /    \\   / .-, \\  | |    /  _  \\         /   |      | |/   \\   /    \\   / .-, \\  | |  (   __)    | |/   \\\n");
-   printf(" |  .-.  .-. ; |  .-. ; (__) ; |  | |   . .' `. ;       / .' |      |  .-. .  |  .-. ; (__) ; |  | |   | |       |  .-. .\n");
-   printf(" | |  | |  | | |  | | |   .'`  |  | |   | '   | |      / / | |      | |  | |  |  | | |   .'`  |  | |   | | ___   | |  | |\n");
-   printf(" | |  | |  | | |  |/  |  / .'| |  | |   _\\_`.(___)    / /  | |      | |  | |  |  |/  |  / .'| |  | |   | |(   )  | |  | |\n");
-   printf(" | |  | |  | | |  ' _.' | /  | |  | |  (   ). '.     /  `--' |-.    | |  | |  |  ' _.' | /  | |  | |   | | | |   | |  | |\n");
-   printf(" | |  | |  | | |  .'.-. ; |  ; |  | |   | |  `\\ |    `-----| |-'    | |  | |  |  .'.-. ; |  ; |  | |   | ' | |   | |  | |\n");
-   printf(" | |  | |  | | '  `-' / ' `-'  |  | |   ; '._,' '          | |      | |  | |  '  `-' / ' `-'  |  | |   ' `-' ;   | |  | |\n");
-   printf("(___)(___)(___) `.__.'  `.__.'_. (___)   '.___.'          (___)    (___)(___)  `.__.'  `.__.'_. (___)   `.__.   (___)(___)\n");
-   printf("\n\n\n");
-   printf("\tPlease Select an Option:");
-   printf("\n\n");
+   printf("\n");
+   printf("   _____         _        ___    _____         _ _   _   \n");
+   printf("  |     |___ ___| |___   | | |  |  |  |___ ___| | |_| |_ \n");
+   printf("  | | | | -_| .'| |_ -|  |_  |  |     | -_| .'| |  _|   |\n");
+   printf("  |_|_|_|___|__,|_|___|    |_|  |__|__|___|__,|_|_| |_|_|\n");
+   printf("\n");
+   printf("  ==========================================\n");
+   printf("\t   Please Select an Option:");
+   printf("\n  ==========================================\n\n");
 
    for (i = 0; i < maxoptions; i++) {
-
-      if (i == choice)  {printf("\t>>\t %s\n", options[i]);}
+      
+      if (i == choice)  {printf("\t>>\t %s\t      <<\n", options[i]);}
       else              {printf("\t\t %s\n", options[i]);}
    }
 }
-
 
 
 
@@ -58,7 +52,9 @@ void mainmenu() {
    int choice = 0;
    int keypress;
 
-   while (running) {
+
+
+   do {
       system("cls");
       printmenu(choice);
    
@@ -73,11 +69,11 @@ void mainmenu() {
       else if (keypress == 13) { // enter key
       
          switch (choice) {
-            case 0: printf("hii"); break;
-            case 1: printf("noo"); break;
-            case 2: running = 0;   break;
+            case 0: update();       break;
+            case 1: printf("noo");  break;
+            case 2: running = 0;    break;
          }
       }
 
-   }
+   } while (running);
 }
