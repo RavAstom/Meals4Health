@@ -28,7 +28,7 @@ The repository may have updated by me, and so the files on your computer are now
 
 To make sure that you have the same files in the repository as you do in ur PC just put
 ```
-git fetch
+git pull
 ```
 DO THIS BEFORE YOU START WORKING ON UR CODE TO AVOID CODING CONFLICTS BUT ILL TRY MY BEST TO TELL YOU WHEN TO FETCH THE REPO
 
@@ -42,6 +42,7 @@ Or if you have make installed on computer (not important)
 ```
 make
 ```
+
 
 
 
